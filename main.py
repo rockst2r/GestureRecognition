@@ -51,7 +51,7 @@ while True:
                     yPosition = np.int(lm.y * imgHeight)
 
                     # put id string next to the landmark
-                    # cv2.putText(frame, str(id), (xPosition-30,yPosition+5), cv2.FONT_ITALIC, 0.3, (255,255,255), 1)
+                    cv2.putText(frame, str(id), (xPosition-30,yPosition+5), cv2.FONT_ITALIC, 0.3, (255,255,255), 1)
 
                     # coordinate of each id in a list
                     coor = []
@@ -69,7 +69,7 @@ while True:
             if fingerDistance < 70:
                 thumb = cv2.circle(frame, (finger4[0], finger4[1]), 8, (0, 255, 0), cv2.FILLED)
                 forefinger = cv2.circle(frame, (finger8[0], finger8[1]), 8, (0, 255, 0), cv2.FILLED)
-                # volumeLine = cv2.line(frame, (finger4[0],finger4[1]), (finger8[0],finger8[1]), (255,255,255), 1)
+                volumeLine = cv2.line(frame, (finger4[0],finger4[1]), (finger8[0],finger8[1]), (255,255,255), 1)
                 centerCir = cv2.circle(frame, (int((finger4[0]+finger8[0])/2),int((finger4[1]+finger8[1])/2)), 8, (0, 255, 255), cv2.FILLED)
                 
             
